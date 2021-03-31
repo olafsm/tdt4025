@@ -1,0 +1,34 @@
+ PROGRAM
+ GLOBAL_LIST
+  FUNCTION
+   IDENTIFIER_DATA(escapecodes)
+   0x0
+   BLOCK
+    DECLARATION_LIST
+     DECLARATION
+      VARIABLE_LIST
+       IDENTIFIER_DATA(a)
+       IDENTIFIER_DATA(b)
+    STATEMENT_LIST
+     PRINT_STATEMENT
+      STRING_DATA("Testing if printf format codes are left alone.")
+      STRING_DATA("\nOutput *should* contain percent characters, but no integers.")
+     ASSIGNMENT_STATEMENT
+      IDENTIFIER_DATA(a)
+      NUMBER_DATA(64)
+     ASSIGNMENT_STATEMENT
+      IDENTIFIER_DATA(b)
+      NUMBER_DATA(42)
+     PRINT_STATEMENT
+      STRING_DATA("\tHello, world! %d %d")
+     PRINT_STATEMENT
+      STRING_DATA("Adding a splash of ANSI color codes - This will only work in a color terminal")
+     PRINT_STATEMENT
+      STRING_DATA("\t\033[31mRed")
+     PRINT_STATEMENT
+      STRING_DATA("\t\033[32mGreen")
+     PRINT_STATEMENT
+      STRING_DATA("\t\033[34mBlue")
+      STRING_DATA("\033[0m")
+     RETURN_STATEMENT
+      NUMBER_DATA(0)
